@@ -1,0 +1,5 @@
+Add all schema for API calls in this folder:
+
+2 Schemas are:
+ - Post
+ - featuredPostSchema

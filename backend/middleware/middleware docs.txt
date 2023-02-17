@@ -1,0 +1,10 @@
+Multer 
+- Used for handling multipart data 
+- here used for handling muliple parts of image data, without uploading to cloud 
+
+Express-Validator
+- Used for validation of API
+- Called in routers' post.js, as part of defining route for POST of create post
+
+ParserForTagsFeatured
+- For parsing extended data types for Tags and featured section of API

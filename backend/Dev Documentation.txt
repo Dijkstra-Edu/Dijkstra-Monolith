@@ -1,0 +1,6 @@
+API Creation:
+----------------------------------------------------
+Controller -> Contains req/res of API
+Routers -> Contains route for API (in case of CreatePost, gets variable from controllers/post)
+Models -> Conatains DB Schema for API calls
+App.js -> Uses API call via app.use() function call (line 10, app.js)
