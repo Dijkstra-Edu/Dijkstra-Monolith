@@ -7,6 +7,7 @@ import CreatePost from './components/CreatePost';
 import Home from './components/Home';
 import NavBar from './components/NavBar';
 import NotFound from './components/NotFound';
+import SearchBar from './components/SearchBar';
 import UpdatePost from './components/UpdatePost';
 
 export default function App() {
@@ -21,24 +22,32 @@ export default function App() {
   return (
     <div className='flex'>
       {/* Nav Section */}
-      <div className={getWidthNav() + ' bg-red-100 transition-width'}>
-        <NavBar/>
+      <div className={getWidthNav() + ' transition-width min-h-screen border border-r'}>
+        <div className="sticky top-0"><NavBar closed={closeNav} /></div>
       </div>
 
 
       {/* Content Section */}
-      <div className="flex-1 h-screen">
-        <button onClick={toggleNav}>
-          {closeNav ? <AiOutlineMenu size={25} /> : <RxCross1 size={25} />}
-        </button>
+      <div className="flex-1 min-h-screen">
+        <div className="sticky top-0">
+          <div className="flex item-center p-2 space-x-2">
+            <button onClick={toggleNav}>
+              {closeNav ? <AiOutlineMenu size={25} /> : <RxCross1 size={25} />}
+            </button>
+            <SearchBar />
+          </div>
+        </div>
 
-    
+
+
+
+
         <div className="max-w-screen-lg mx-auto"> {/*Centre Screen*/}
           <Routes> {/*For handling routes*/}
-            <Route path='/' element={<Home/>}/> {/*Redirects to Home Component*/}
-            <Route path='/create-post' element={<CreatePost/>}/> {/*Redirects to Home Component*/}
-            <Route path='/update-post' element={<UpdatePost/>}/> {/*Redirects to Home Component*/}
-            <Route path='*' element={<NotFound/>}/> {/*Redirects to Home Component*/}
+            <Route path='/' element={<Home />} /> {/*Redirects to Home Component*/}
+            <Route path='/create-post' element={<CreatePost />} /> {/*Redirects to Home Component*/}
+            <Route path='/update-post' element={<UpdatePost />} /> {/*Redirects to Home Component*/}
+            <Route path='*' element={<NotFound />} /> {/*Redirects to Home Component*/}
           </Routes>
         </div>
       </div>

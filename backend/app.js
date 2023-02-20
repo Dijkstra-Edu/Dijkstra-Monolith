@@ -5,10 +5,12 @@ const express = require('express');
 require('dotenv').config();
 const morgan = require('morgan');
 const postRouter = require('./routers/post')
+const cors = require('cors')
 
-const app = express()
-app.use(express.json())
-app.use(morgan("dev"))
+const app = express();
+app.use(cors({origin: 'http://172.17.56.159:3000'}));
+app.use(express.json());
+app.use(morgan("dev"));
 app.use("/api/post/",postRouter);
 
 app.use((err,req,res,next) => {

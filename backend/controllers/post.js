@@ -192,12 +192,13 @@ exports.getPosts = async (req, res) => { //Flexible Route
         posts: posts.map((post) => ({
             id: post._id,
             title: post.title,
-            //tags: post.tags,
+            tags: post.tags,
             meta: post.meta,
             slug: post.slug,
             //content: post.content,
             thumbnail: post.thumbnail?.url,
-            author: post.author
+            author: post.author,
+            createdAt: post.createdAt
         }))
     });
 };
