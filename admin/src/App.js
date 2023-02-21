@@ -9,6 +9,7 @@ import NavBar from './components/NavBar';
 import NotFound from './components/NotFound';
 import SearchBar from './components/SearchBar';
 import UpdatePost from './components/UpdatePost';
+//import UpdatePostMain from './components/UpdatePostMain';
 
 export default function App() {
 
@@ -17,23 +18,27 @@ export default function App() {
     setCloseNav(!closeNav);
   };
 
-  const getWidthNav = () => (closeNav ? 'w-16' : 'w-56'); //function to decide width based on state of closeNav
+  const getWidthNav = () => (closeNav ? 'w-12' : 'w-56'); //function to decide width based on state of closeNav
 
   return (
     <div className='flex'>
       {/* Nav Section */}
-      <div className={getWidthNav() + ' transition-width min-h-screen border border-r'}>
-        <div className="sticky top-0"><NavBar closed={closeNav} /></div>
+      <div className={getWidthNav() + ' transition-width min-h-screen bg-black'}>
+        <div className="sticky top-0 px-2 py-3">
+          <button onClick={toggleNav}>
+            {closeNav ? <div className=''><AiOutlineMenu color='green' size={25} /></div>  : <div className='relative transition-width left-0'><RxCross1 color='red' size={25} /></div>}
+          </button>
+        </div>
+
+        <div className="sticky top-20 pt-40"><NavBar closed={closeNav} /></div>
+
       </div>
 
 
       {/* Content Section */}
       <div className="flex-1 min-h-screen">
-        <div className="sticky top-0">
-          <div className="flex item-center p-2 space-x-2">
-            <button onClick={toggleNav}>
-              {closeNav ? <AiOutlineMenu size={25} /> : <RxCross1 size={25} />}
-            </button>
+        <div className="sticky top-0 bg-white ">
+          <div className="flex items-center justify-center w-full p-2 space-x-2">
             <SearchBar />
           </div>
         </div>
@@ -45,8 +50,9 @@ export default function App() {
         <div className="max-w-screen-lg mx-auto"> {/*Centre Screen*/}
           <Routes> {/*For handling routes*/}
             <Route path='/' element={<Home />} /> {/*Redirects to Home Component*/}
-            <Route path='/create-post' element={<CreatePost />} /> {/*Redirects to Home Component*/}
-            <Route path='/update-post' element={<UpdatePost />} /> {/*Redirects to Home Component*/}
+            <Route path='/create-post' element={<CreatePost />} /> {/*Redirects to Create-Post Component*/}
+            <Route path='/update-post/:slug' element={<UpdatePost />} /> {/*Redirects to Update-Post Component*/}
+            {/* <Route path='/update-post-list' element={<UpdatePostMain />} /> Section of Main Page (Implement yourself) */}
             <Route path='*' element={<NotFound />} /> {/*Redirects to Home Component*/}
           </Routes>
         </div>

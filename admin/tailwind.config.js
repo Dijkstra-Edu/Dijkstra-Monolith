@@ -5,7 +5,10 @@ module.exports = {
     extend: {
       transitionProperty: {
         'width': 'width',
-      }
+      },
+      colors: {
+        'custom-green': '#008000',
+      },
     },
   },
   plugins: [],

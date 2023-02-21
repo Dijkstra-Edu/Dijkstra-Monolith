@@ -188,6 +188,8 @@ exports.getPosts = async (req, res) => { //Flexible Route
         .skip(parseInt(pageNo) * parseInt(limit))
         .limit(limit); //For loading more data in app, via skip()
 
+    const postCount = await Post.countDocuments(); //For handling pagination
+
     res.json({
         posts: posts.map((post) => ({
             id: post._id,
@@ -199,7 +201,8 @@ exports.getPosts = async (req, res) => { //Flexible Route
             thumbnail: post.thumbnail?.url,
             author: post.author,
             createdAt: post.createdAt
-        }))
+        })),
+        postCount,
     });
 };
 
@@ -214,12 +217,13 @@ exports.searchPost = async (req, res) => { //Flexible Route
         posts: posts.map((post) => ({
             id: post._id,
             title: post.title,
-            //tags: post.tags,
+            tags: post.tags,
             meta: post.meta,
             slug: post.slug,
             //content: post.content,
             thumbnail: post.thumbnail?.url,
-            author: post.author
+            author: post.author,
+            createdAt: post.createdAt
         }))
     });
 };
