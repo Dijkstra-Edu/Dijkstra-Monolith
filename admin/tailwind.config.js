@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       transitionProperty: {
         'width': 'width',
+        'bottom': 'bottom',
       },
       colors: {
         'custom-green': '#008000',
