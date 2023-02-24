@@ -10,7 +10,15 @@ module.exports = {
       colors: {
         'custom-green': '#008000',
       },
+      width: {
+        "device-width": "360px",
+      },
+      height: {
+        "device-height": "640px",
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };

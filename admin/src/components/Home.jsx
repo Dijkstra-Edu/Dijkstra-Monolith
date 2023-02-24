@@ -3,6 +3,7 @@ import { delPosts, getPosts } from '../api/post'
 import { useState } from 'react';
 import PostCard from './PostCard';
 import { useSearch } from '../contextAPI/searchProvider';
+import { useNotification } from '../contextAPI/NotificationProvider';
 
 let pageNo = 0;
 const POST_LIMIT = 9;
@@ -19,13 +20,14 @@ export default function Home() {
   const { searchResult } = useSearch(); //Custom hook via context API
   const [posts, setPosts] = useState([])
   const [totalPostCount, setTotalPostCount] = useState([])
+  const { updateNotification } = useNotification()
 
   const paginationCount = getPaginationCount(totalPostCount);
   const paginationArray = new Array(paginationCount).fill(' ');
 
   const fetchPosts = async () => {
     const { error, posts, postCount } = await getPosts(pageNo, POST_LIMIT);
-    if (error) return console.log(error);
+    if (error) return updateNotification('error', "Error Encountered in Home.jsx: "+error);;
 
     //console.log(posts);
     setPosts(posts);
@@ -34,6 +36,7 @@ export default function Home() {
 
   useEffect(() => {
     fetchPosts()
+    // eslint-disable-next-line
   }, []);
 
   const fetchMorePosts = (index) => {
@@ -45,8 +48,8 @@ export default function Home() {
     const confirmed = window.confirm('Are you sure you want to delete post titled "' + title + '"?');
     if (!confirmed) return;
     const { error, message } = await delPosts(id);
-    if (error) return console.log(error);
-    console.log(message);
+    if (error) return updateNotification('error', "Error Encountered in Home.jsx: "+error);
+    updateNotification('success', "Successfully Deleted Post: " + message);
 
     const newPosts = posts.filter(p => p.id !== id)
     setPosts(newPosts);

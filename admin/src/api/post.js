@@ -69,3 +69,31 @@ export const createPost  = async(formData) => {
         return  {error: error.message || error};
     }
 };
+
+export const getPost  = async(slug) => {
+    try {
+        const {data} = await client.get(`/post/single/${slug}`);
+        return data;
+    } catch (error) {
+        const {response} = error;
+        if(response?.data)
+        {
+            return response.data
+        }
+        return  {error: error.message || error};
+    }
+};
+
+export const updatePost  = async(postId, formData) => {
+    try {
+        const {data} = await client.put(`/post/${postId}`, formData);
+        return data;
+    } catch (error) {
+        const {response} = error;
+        if(response?.data)
+        {
+            return response.data
+        }
+        return  {error: error.message || error};
+    }
+};
