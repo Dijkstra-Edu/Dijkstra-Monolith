@@ -17,7 +17,7 @@ const httpsOptions = {
 }
 
 const app = express();
-app.use(cors({ origin: 'http://172.17.56.205:3000' })); //192.168.33.158 
+app.use(cors({ origin: 'http://172.17.60.188:3000' })); //192.168.33.158 
 app.use(express.json());
 app.use(morgan("dev"));
 app.use("/api/post/", postRouter);

@@ -28,7 +28,7 @@ export default function Slider({ data, title }) {
             }, 4000);
         }
         else {
-            pauseSlider();
+            //pauseSlider();
         }
     };
 
@@ -38,7 +38,7 @@ export default function Slider({ data, title }) {
 
     useEffect(() => {
         if (dataToRender.length && flatlist.current) {
-            startSlider();
+           // startSlider();
         }
     }, [dataToRender.length]);
 
@@ -117,6 +117,6 @@ const styles = StyleSheet.create({
     container: {
         alignSelf: "center",
         width,
-        paddingTop: 50,
+        //paddingTop: 50,
     },
 });
