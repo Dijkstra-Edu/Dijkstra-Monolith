@@ -3,18 +3,18 @@ require("express-async-errors")
 
 const express = require('express');
 
-//const https = require('https');
-const fs = require('fs');
+// //const https = require('https');
+// const fs = require('fs');
 
 require('dotenv').config();
 // const morgan = require('morgan');
 const postRouter = require('./routers/post')
 const cors = require('cors')
 
-const httpsOptions = {
-    key: fs.readFileSync('./security/cert.key'),
-    cert: fs.readFileSync('./security/cert.pem')
-}
+// const httpsOptions = {
+//     key: fs.readFileSync('./security/cert.key'),
+//     cert: fs.readFileSync('./security/cert.pem')
+// }
 
 const app = express();
 app.use(cors()); //192.168.33.158 { origin: 'http://172.17.60.188:3000' }

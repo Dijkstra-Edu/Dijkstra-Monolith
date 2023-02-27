@@ -105,3 +105,5 @@ dist
 
 # environment vars
 .env
+
+./backend/security
