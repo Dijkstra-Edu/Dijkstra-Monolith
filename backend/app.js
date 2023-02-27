@@ -3,11 +3,11 @@ require("express-async-errors")
 
 const express = require('express');
 
-const https = require('https');
+//const https = require('https');
 const fs = require('fs');
 
 require('dotenv').config();
-const morgan = require('morgan');
+// const morgan = require('morgan');
 const postRouter = require('./routers/post')
 const cors = require('cors')
 
@@ -17,9 +17,9 @@ const httpsOptions = {
 }
 
 const app = express();
-app.use(cors({ origin: 'http://172.17.60.188:3000' })); //192.168.33.158 
+app.use(cors()); //192.168.33.158 { origin: 'http://172.17.60.188:3000' }
 app.use(express.json());
-app.use(morgan("dev"));
+//app.use(morgan("dev"));
 app.use("/api/post/", postRouter);
 
 app.use((err, req, res, next) => {
