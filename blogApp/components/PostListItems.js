@@ -4,7 +4,7 @@ import dateFormat from 'dateformat'
 
 const IMAGE_WIDTH = 100
 
-export default function PostListItems({ post }) {
+export default function PostListItems({ post, onPress }) {
     const { thumbnail, title, createdAt, author } = post
 
     const getThumbnail = (uri) => {
@@ -13,7 +13,7 @@ export default function PostListItems({ post }) {
     }
 
     return (
-        <TouchableOpacity style={styles.touchable}>
+        <TouchableOpacity onPress={onPress} style={styles.touchable}>
             <Image source={getThumbnail(thumbnail)} style={{ width: IMAGE_WIDTH, height: IMAGE_WIDTH / 1.7 }} />
             <View style={{ flex: 1, marginLeft: 5 }}>
                 <Text style={styles.text}>{title}</Text>

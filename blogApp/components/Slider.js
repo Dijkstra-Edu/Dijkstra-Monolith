@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
-import { StyleSheet, FlatList, View, Image, Dimensions, Text } from 'react-native';
+import { StyleSheet, FlatList, View, Image, Dimensions, Text, TouchableWithoutFeedback } from 'react-native';
 
 const width = Dimensions.get('window').width - 20
 let currentSlideIndex = 0;
 let intervalId;
 
-export default function Slider({ data, title }) {
+export default function Slider({ data, title, onSlidePress }) {
     const [dataToRender, setDataToRender] = useState([]);
     const [visibleSlideIndex, setVisibleSlideIndex] = useState(0);
     const [activeSlideIndex, setActiveSlideIndex] = useState(0);
@@ -28,7 +28,7 @@ export default function Slider({ data, title }) {
             }, 4000);
         }
         else {
-            //pauseSlider();
+            pauseSlider();
         }
     };
 
@@ -38,8 +38,13 @@ export default function Slider({ data, title }) {
 
     useEffect(() => {
         if (dataToRender.length && flatlist.current) {
-           // startSlider();
+            startSlider();
         }
+
+        return () => {
+            pauseSlider();
+        }
+
     }, [dataToRender.length]);
 
     useEffect(() => {
@@ -69,12 +74,14 @@ export default function Slider({ data, title }) {
 
     const renderItemMethod = ({ item }) => {
         return (
-            <View>
-                <Image source={{ uri: item.thumbnail }} style={{ width, height: width / 1.7, borderRadius: 7 }} />
-                <View style={{ width }}>
-                    <Text numberOfLines={2} style={{ fontWeight: "700", color: "#383838", fontSize: 22, marginTop: 5 }}>{item.title}</Text>
+            <TouchableWithoutFeedback onPress={() => onSlidePress(item)}>
+                <View>
+                    <Image source={{ uri: item.thumbnail }} style={{ width, height: width / 1.7, borderRadius: 7 }} />
+                    <View style={{ width }}>
+                        <Text numberOfLines={2} style={{ fontWeight: "700", color: "#383838", fontSize: 22, marginTop: 5 }}>{item.title}</Text>
+                    </View>
                 </View>
-            </View>
+            </TouchableWithoutFeedback>
         );
     };
 
