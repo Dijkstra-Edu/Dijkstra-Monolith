@@ -17,7 +17,7 @@ const cors = require('cors')
 // }
 
 const app = express();
-app.use(cors({ origin: ['https://master--stately-raindrop-46ef06.netlify.app/'] })); //192.168.33.158 //'http://172.17.60.188:3000', 
+app.use(cors({ origin: ['https://master--stately-raindrop-46ef06.netlify.app'] })); //192.168.33.158 //'http://172.17.60.188:3000', 
 app.use(express.json());
 //app.use(morgan("dev"));
 app.use("/api/post/", postRouter);
