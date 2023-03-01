@@ -3,6 +3,7 @@ import client from './client'
 export const getFeaturedPost = async () => {
     try {
         const { data } = await client.get(`/post/featured-posts`);
+        //console.log(data);
         return data;
     } catch (error) {
         const { response } = error;
@@ -16,6 +17,7 @@ export const getFeaturedPost = async () => {
 export const getLatestPosts = async (limit, pageNo) => {
     try {
         const { data } = await client.get(`/post/posts?limit=${limit}&pageNo=${pageNo}`);
+        //console.log(data);
         return data;
     } catch (error) {
         const { response } = error;

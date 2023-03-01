@@ -108,7 +108,7 @@ export default function Slider({ data, title, onSlidePress }) {
                     offset: width * index,
                     index
                 })}
-                keyExtractor={(item, index) => item.id + index}
+                listKey={(item, index) => (item.id + index)}
                 onViewableItemsChanged={onViewableItemsChanged.current}
                 viewabilityConfig={viewabilityConfig.current}
                 onScrollBeginDrag={pauseSlider}
