@@ -24,7 +24,7 @@ export default function Slider({ data, title, onSlidePress }) {
     const startSlider = () => {
         if (currentSlideIndex <= dataToRender.length - 2) {
             intervalId = setInterval(() => {
-                flatlist.current.scrollToIndex({ animated: true, index: currentSlideIndex });
+                flatlist.current.scrollToIndex({ animated: true, index: currentSlideIndex + 1 });
             }, 4000);
         }
         else {
