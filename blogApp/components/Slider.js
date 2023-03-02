@@ -24,7 +24,7 @@ export default function Slider({ data, title, onSlidePress }) {
     const startSlider = () => {
         if (currentSlideIndex <= dataToRender.length - 2) {
             intervalId = setInterval(() => {
-                flatlist.current.scrollToIndex({ animated: true, index: currentSlideIndex + 1 });
+                flatlist.current.scrollToIndex({ animated: true, index: currentSlideIndex });
             }, 4000);
         }
         else {
@@ -108,7 +108,7 @@ export default function Slider({ data, title, onSlidePress }) {
                     offset: width * index,
                     index
                 })}
-                listKey={(item, index) => (item.id + index)}
+                keyExtractor={(item, index) => (item.id + index)}
                 onViewableItemsChanged={onViewableItemsChanged.current}
                 viewabilityConfig={viewabilityConfig.current}
                 onScrollBeginDrag={pauseSlider}

@@ -60,7 +60,7 @@ export default function Home({ navigation }) {
 
   const Carousel = useCallback(() => {
     return (<View style={{ paddingTop: Constants.statusBarHeight }}>
-      {/* {featuerdPosts.length ? <Slider onSlidePress={fetchSinglePost} data={featuerdPosts} title="Featured Posts" /> : null} */}
+      {featuerdPosts.length ? <Slider onSlidePress={fetchSinglePost} data={featuerdPosts} title="Featured Posts" /> : null}
       <View style={{ marginTop: 15 }}>
         <Seperator width='100%' />
         <Text style={{ fontWeight: "700", color: "#383838", fontSize: 22, marginTop: 15 }}>Latest Posts</Text>
@@ -91,7 +91,7 @@ export default function Home({ navigation }) {
     data={latestPosts}
     keyExtractor={(item) => item.id}
     contentContainerStyle={{ paddingHorizontal: 10, paddingBottom: 20 }}
-    //ListHeaderComponent={Carousel}
+    ListHeaderComponent={Carousel}
     ItemSeparatorComponent={itemSeparatorComponent}
     renderItem={renderItem}
     onEndReached={fetchMorePosts}
