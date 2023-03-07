@@ -1,0 +1,11 @@
+List of Changes to be made to migrate to and fro between Development and Production:
+
+1) Backend:
+    1.1) ./app.js
+        - app.use(cors()) -> Change address as required
+    1.2) ./.env 
+        - Switch between Dev and Server URL (Not necessary during deployment as env variables are handled seperately)
+
+2) Admin:
+    2.1) ./api/client.js
+        - Switch between Dev and Server Axios client
