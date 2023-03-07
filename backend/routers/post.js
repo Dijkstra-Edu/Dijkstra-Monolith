@@ -2,7 +2,7 @@
 const router = require('express').Router()
 
 const multer = require("../middleware/multer");
-const {createPost, deletePost, updatePost, getPost, getFeaturedPosts, getPosts, searchPost, getRelatedPosts, uploadImage} = require("../controllers/post"); //CRUD
+const {createPost, deletePost, updatePost, getPost, getFeaturedPosts, getPosts, searchPost, getRelatedPosts, uploadImage, getTrash} = require("../controllers/post"); //CRUD
 const { postValidator, validate } = require('../middleware/postValidator');
 const { parseData } = require('../middleware/ParserForTagsFeatured');
 
@@ -25,6 +25,7 @@ router.get('/featured-posts',getFeaturedPosts);
 router.get('/posts', getPosts);
 router.get('/search', searchPost);
 router.get('/related-posts/:postId', getRelatedPosts);
+router.get('/trash', getTrash)
 
 //Update Route
 router.put('/:postId',

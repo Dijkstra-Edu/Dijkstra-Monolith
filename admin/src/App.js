@@ -26,7 +26,7 @@ export default function App() {
       <div className={getWidthNav() + ' transition-width min-h-screen bg-black'}>
         <div className="sticky top-0 px-2 py-3">
           <button onClick={toggleNav}>
-            {closeNav ? <div className=''><AiOutlineMenu color='green' size={25} /></div>  : <div className='relative transition-width left-0'><RxCross1 color='red' size={25} /></div>}
+            {closeNav ? <div className=''><AiOutlineMenu color='green' size={25} /></div> : <div className='relative transition-width left-0'><RxCross1 color='red' size={25} /></div>}
           </button>
         </div>
 
@@ -34,18 +34,14 @@ export default function App() {
 
       </div>
 
-
       {/* Content Section */}
       <div className="flex-1 min-h-screen">
-        <div className="sticky top-0 bg-white ">
+
+        <div className="sticky top-0 bg-slate-100/60 z-50 backdrop-filter backdrop:blur-xl">
           <div className="flex items-center justify-center w-full p-2 space-x-2">
             <SearchBar />
           </div>
         </div>
-
-
-
-
 
         <div className="max-w-screen-lg mx-auto"> {/*Centre Screen*/}
           <Routes> {/*For handling routes*/}

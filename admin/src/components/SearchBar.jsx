@@ -34,9 +34,13 @@ export default function SearchBar() {
       <input
         value={query}
         onKeyDown={handleKeyDown}
-        onChange={({ target }) => setQuery(target.value)}
+        onChange={({ target }) => {
+          setQuery(target.value);
+          if (!query.trim()) return;
+          handleSearch(query) //Hamdle Change live
+        }}
         placeholder='Search'
-        className='m-1 border-2 rounded-full outline-none py-1 px-4 focus:ring-1 ring-[#008000]'
+        className='m-1 w-72 border-2 bg-slate-100/60 rounded-full outline-none py-2 px-5 transition ease-in-out delay-150 focus:ring-1 ring-[#008000]'
       />
       {searchResult.length
         ? (<button onClick={handleReset} className='absolute top-1/2 -translate-y-1/2 text-gray-400 right-3'>

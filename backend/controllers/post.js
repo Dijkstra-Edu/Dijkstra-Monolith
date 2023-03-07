@@ -1,5 +1,6 @@
 const Post = require("../Models/post");
 const FeaturedPost = require("../Models/featuredPost");
+const Trash = require("../Models/trash");
 
 const cloudinary = require("../Cloud/index");
 const { isValidObjectId } = require("mongoose");
@@ -228,6 +229,32 @@ exports.searchPost = async (req, res) => { //Flexible Route
     });
 };
 
+exports.getTrash = async (req, res) => { //Flexible Route
+    //http://localhost:4848/api/post/posts?pageNo=0&limit=10 -> Parameters called are pageNo (val = 0) & limit (val = 10)
+    const { pageNo = 0, limit = 10 } = req.query; //default pageNo, limit
+    const posts = await Trash.find({})
+        .sort({ createdAt: -1 })
+        .skip(parseInt(pageNo) * parseInt(limit))
+        .limit(limit); //For loading more data in app, via skip()
+
+    const postCount = await Trash.countDocuments(); //For handling pagination
+
+    res.json({
+        posts: posts.map((post) => ({
+            id: post._id,
+            title: post.title,
+            tags: post.tags,
+            meta: post.meta,
+            slug: post.slug,
+            //content: post.content,
+            thumbnail: post.thumbnail?.url,
+            author: post.author,
+            createdAt: post.createdAt
+        })),
+        postCount,
+    });
+};
+
 exports.getRelatedPosts = async (req, res) => { //Flexible Route
 
     const { postId } = req.params;
@@ -261,5 +288,5 @@ exports.uploadImage = async (req, res) => {
     if (!file) return res.status(401).json({ error: 'Image file is Missing!' });
     const { secure_url: url } = await cloudinary.uploader.upload(file.path);
 
-    res.status(201).json({image: url});
+    res.status(201).json({ image: url });
 };
