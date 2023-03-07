@@ -3,18 +3,11 @@ require("express-async-errors")
 
 const express = require('express');
 
-// //const https = require('https');
-// const fs = require('fs');
-
 require('dotenv').config();
 // const morgan = require('morgan');
 const postRouter = require('./routers/post')
 const cors = require('cors')
 
-// const httpsOptions = {
-//     key: fs.readFileSync('./security/cert.key'),
-//     cert: fs.readFileSync('./security/cert.pem')
-// }
 
 const app = express();
 
@@ -38,7 +31,3 @@ const PORT = process.env.PORT;
 app.listen(PORT, () => {
     console.log("Port is listening on " + PORT)
 })
-
-// https.createServer(httpsOptions, app).listen(PORT, () => {
-//         console.log('Server running at ' + PORT)
-//     })
