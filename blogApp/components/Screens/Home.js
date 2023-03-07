@@ -85,6 +85,8 @@ export default function Home({ navigation }) {
 
   const itemSeparatorComponent = () => <Seperator width='90%' style={{ marginTop: 15 }} />
 
+  // return (<Slider onSlidePress={fetchSinglePost} data={featuerdPosts} title="Featured Posts" />);
+
   return <FlatList
     data={latestPosts}
     keyExtractor={(item) => item.id}
@@ -110,6 +112,6 @@ export default function Home({ navigation }) {
       ) : null;
     }}
   />
-  //
+  
 }
 
