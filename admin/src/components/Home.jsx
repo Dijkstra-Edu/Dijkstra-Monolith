@@ -73,7 +73,7 @@ export default function Home() {
             onClick={() => fetchMorePosts(index)}
             className={
               index === pageNo
-                ? 'text-blue-500 border-b-2 border-b-blue-500'
+                ? 'text-custom-green border-b-2 border-custom-green'
                 : 'text-gray-500'
             }>{index + 1}</button>
         })}

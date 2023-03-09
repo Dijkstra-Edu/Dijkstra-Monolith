@@ -9,6 +9,7 @@ module.exports = {
       },
       colors: {
         'custom-green': '#008000',
+        'custom-red': '#C90000'
       },
       width: {
         "device-width": "360px",
@@ -20,5 +21,6 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/typography'),
+    require('tailwind-scrollbar'),
   ],
 };
