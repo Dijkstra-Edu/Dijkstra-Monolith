@@ -103,6 +103,7 @@ export default function PostForm({ onSubmit, busy, postBtnTitle, initialPost, re
   const handleOnCopy = () => {
     const textToCopy = `![Add Image Description](${imageUrlToCopy})`
     navigator.clipboard.writeText(textToCopy);
+    //window.navigator.clipboard.writeText(textToCopy);
   };
 
   const handleSubmit = (e) => {
@@ -125,11 +126,22 @@ export default function PostForm({ onSubmit, busy, postBtnTitle, initialPost, re
     }
 
     onSubmit(formData);
+    //return updateNotification('success', 'Successfully Added Blog');
   };
 
   const resetForm = () => {
     setPostInfo({ ...defaultPost });
     localStorage.removeItem("blogPost");
+  };
+
+  const resetForm2 = () => {
+    if (window.confirm("Are you sure you want to Reset Your Blog? All unsaved data will be lost...")) {
+      setPostInfo({ ...defaultPost });
+      localStorage.removeItem("blogPost");
+      return updateNotification('success', 'Successfully Reset Blog');
+    } else {
+      return
+    }
   };
 
   const { title, content, tags, featured, meta } = postInfo;
@@ -139,11 +151,12 @@ export default function PostForm({ onSubmit, busy, postBtnTitle, initialPost, re
     <>
       <form className='p-2 flex' onSubmit={handleSubmit} >
         <div className="w-9/12 space-y-5 p-2 flex flex-col h-screen">
+
           <div className="flex items-center justify-between">
             <h1 className='text-7xl font-semibold text-gray-700'>Create your Post</h1>
 
           </div>
-          <p>The v2.0 dashboard comes with a renewed, fresh look</p>
+          <p>The v2.0 dashboard comes with a renewed, fresh look to handle your Blogging needs. </p>
           <div className="flex items-center space-x-5">
 
           </div>
@@ -158,7 +171,7 @@ export default function PostForm({ onSubmit, busy, postBtnTitle, initialPost, re
             </label>
 
             <div className='flex'>
-              <button onClick={resetForm} type='button' className='flex mx-2 items-center space-x-2 px-3 ring-1 ring-custom-red rounded h-10 text-custom-red hover:bg-custom-red hover:text-white'><ImSpinner11 /><span>Reset</span></button>
+              <button onClick={resetForm2} type='button' className='flex mx-2 items-center space-x-2 px-3 ring-1 ring-custom-red rounded h-10 text-custom-red hover:bg-custom-red hover:text-white'><ImSpinner11 /><span>Reset</span></button>
               <button onClick={() => setShowDeviceView(true)} type='button' className='flex mx-1 items-center space-x-2 px-3 ring-1 ring-gray-500 rounded h-10 text-gray-500 hover:bg-gray-500 hover:text-white'><ImEye /><span>View</span></button>
               <button className='flex mx-2 items-center space-x-2 ring-1 ring-custom-green rounded h-10 px-20 bg-custom-green hover:bg-custom-green text-white'>{busy ? <ImSpinner2 className='animate-spin mx-auto text-xl' /> : (postBtnTitle)}</button>
             </div>
@@ -177,15 +190,16 @@ export default function PostForm({ onSubmit, busy, postBtnTitle, initialPost, re
               </label>
             </div>
 
-            {imageUrlToCopy && (<div className='flex flex-1 justify-between rounded overflow-hidden bg-gray-400'>
-              <input type="text" value={imageUrlToCopy} className="bg-transparent px-2 text-white w-full" disabled />
-              <button onClick={handleOnCopy} type='button' className='text-xs flex flex-col items-center justify-center p-1 self-stretch bg-gray-700 text-white'><ImFileEmpty /><span>Copy</span></button>
+            {imageUrlToCopy && (<div className='flex flex-1 justify-between rounded overflow-hidden  bg-white border border-custom-green'>
+              <input type="text" value={imageUrlToCopy} className="bg-transparent space-x-2 px-3 text-gray-400 w-full" disabled />
+              <button onClick={handleOnCopy} type='button' className='text-xs flex flex-col items-center justify-center p-1 self-stretch text-custom-green'><ImFileEmpty /><span>Copy</span></button>
             </div>)}
           </div>
 
 
+
           {/* Markdown Input */}
-          <textarea value={content} name='content' onChange={handleChange} className='flex-1 resize-none w-full outline-none focus:ring-custom-green focus:ring-1 rounded p-2 font-mono tracking-wide text-lg bg-slate-100' placeholder='Markdown'></textarea>
+          <textarea value={content} name='content' onChange={handleChange} rows="10" className='flex-1 resize-none w-full outline-none focus:ring-custom-green focus:ring-1 rounded p-2 font-mono tracking-wide text-sm bg-slate-100' placeholder='Markdown'></textarea>
 
           {/* Tags Input */}
           <div>
@@ -201,7 +215,7 @@ export default function PostForm({ onSubmit, busy, postBtnTitle, initialPost, re
         </div>
 
         {/* Thumbnail */}
-        <div className="w-1/4 px-2 relative">
+        <div className="w-1/4 px-2 relative my-10">
           <h1 className='text-xl font-semibold text-gray-700 mb-2'>Thumbnail</h1>
           <div>
             <input name='thumbnail' onChange={handleChange} id='thumbnail' type="file" hidden />
@@ -217,8 +231,8 @@ export default function PostForm({ onSubmit, busy, postBtnTitle, initialPost, re
           </div>
 
           {/* Markdown Rules */}
-          <div className="border border-custom-green text-text-gray-700 absolute top-2 translate-y-1/2 px-2 py-4 rounded">
-            <h1 className='font-semibold text-center'>General Markdown Rules</h1>
+          <div className="border border-custom-green text-text-gray-700 absolute top-1 translate-y-1/2 px-2 py-4 rounded">
+            <h1 className='font-semibold text-lg p-2 text-center'>General Markdown Rules</h1>
             <ul className='space-y-2'>
               {mdRules.map(({ title, rule }) => {
                 return <li key={title}>

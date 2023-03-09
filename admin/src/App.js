@@ -21,7 +21,9 @@ export default function App() {
   const getWidthNav = () => (closeNav ? 'w-12' : 'w-56'); //function to decide width based on state of closeNav
 
   return (
+
     <div className='flex'>
+
       {/* Nav Section */}
       <div className={getWidthNav() + ' transition-width min-h-screen bg-black'}>
         <div className="sticky top-0 px-2 py-3">
@@ -53,6 +55,7 @@ export default function App() {
           </Routes>
         </div>
       </div>
+
     </div>
   )
 }
