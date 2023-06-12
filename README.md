@@ -13,18 +13,8 @@
     <a href="https://www.linkedin.com/company/dijkstra-edu/">LinkedIn</a> •
     <a href="https://discord.com/invite/Vs87cBBU">Discord</a>
     <br /><br />
-    <a href="">
-        <img src="https://img.shields.io/badge/downloads-3-brightgreen.svg" alt="Downloads" />
-    </a>
-    <a href="">
-        <img src="https://img.shields.io/github/release/TryGhost/Ghost.svg" alt="Latest release" />
-    </a>
-    <a href="">
-        <img src="https://github.com/TryGhost/Ghost/workflows/Test%20Suite/badge.svg?branch=main" alt="Build status" />
-    </a>
-    <a href="">
-        <img src="https://img.shields.io/github/contributors/TryGhost/Ghost.svg" alt="Contributors" />
-    </a>
+    <img alt="GitHub Org's stars" src="https://img.shields.io/github/stars/Dijkstra-edu?style=social">
+    <img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fdijkstra-edu.github.io%2FDijkstra-Web%2F">
 </p>
 
 # Dijkstra - A one Stop Solution for all your CompSci educational needs!
