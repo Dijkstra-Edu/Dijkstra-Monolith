@@ -34,6 +34,125 @@ If you can help, please do reach out to us! :) Feel free to send a message throu
 
 &nbsp;
 
+# Usage
+
+Download the current demo release APK file [here](https://drive.google.com/file/d/1cQ8enp24gR10reOGUvDMJe9Jtb7JijUc/view?usp=sharing).
+
+We're still working on CI/CD and App Store integration in the near future. Until then, please do bear with our App Store Deployments, sorry!
+
+Check out our [official documentation]() for more information about our [recommended hosting stack]() & properly [Updating Dijkstra](), plus work with [our API]().
+
+&nbsp;
+
+# Development
+
+### Server - Node (Use Version: v18.14.2)
+
+Enter Backend directory
+```bash
+cd backend
+```
+
+Begin by installing node dependencies.
+```bash
+npm i 
+```
+
+Start server
+```bash
+npm start
+```
+
+Other important tips to note:
+```bash
+API Creation:
+----------------------------------------------------
+Controller -> Contains req/res of API
+Routers -> Contains route for API (in case of CreatePost, gets variable from controllers/post)
+Models -> Conatains DB Schema for API calls
+App.js -> Uses API call via app.use() function call (line 10, app.js)
+```
+
+Check out our [official documentation]() for more information about our [recommended hosting stack]() & properly [Updating Dijkstra](), plus work with [our API]().
+
+### Admin Dashboard
+
+Enter Admin directory
+```bash
+cd admin
+```
+
+Begin by installing node dependencies.
+```bash
+npm i 
+```
+
+Start developmental server
+```bash
+npm start
+```
+
+You should see this in your terminal on successful deployment
+```bash
+Compiled successfully!
+
+You can now view admin in the browser.
+
+  http://localhost:3000
+
+Note that the development build is not optimized.  
+To create a production build, use npm run build.   
+
+webpack compiled successfully
+```
+
+#### React Native App
+
+Enter Application Directory
+```bash
+cd blogApp
+```
+
+Download Dependencies
+```bash
+npm i
+```
+
+Make sure you have an Emulator installed. If not, you can refer to this [article](https://developer.android.com/studio/run/emulator) for Android, and this [article](https://www.browserstack.com/guide/run-ios-apps-on-mac) for IOS. Once that's done. Check to see if Emulator is installed in VS Code via
+```bash
+ctrl + alt + e
+```
+
+Select Option *View Emulators* and then select any installed emulator. Once booted, enter the following in the terminal:
+```bash
+expo start
+```
+
+On entering the metro bundler;
+```bash
+› Press a │ open Android
+› Press i │ open IOS
+› Press w │ open web
+
+› Press r │ reload app
+› Press m │ toggle menu
+
+› Press ? │ show all commands
+```
+
+&nbsp;
+
+# TaskList (Things to do)
+
+&nbsp;
+
+# Dijkstra's Gameplan
+![Dijkstra-Architecture](https://github.com/Dijkstra-Edu/Dijkstra/assets/70965472/c3966b86-467d-4388-be58-874aa18468f2)
+
+It's still a work in progress, but please feel free to suggest changes, via GitHub [issues](https://github.com/Dijkstra-Edu/Dijkstra/issues).
+
+&nbsp;
+
 # Current Progress
 
 ![admin-panel1](https://github.com/Dijkstra-Edu/Dijkstra/assets/70965472/921eae5b-a754-42de-aa37-1f855afe7ec3)
@@ -50,54 +169,12 @@ If you can help, please do reach out to us! :) Feel free to send a message throu
 
 &nbsp;
 
-# TaskList (Things to do)
-
-&nbsp;
-
-# Dijkstra's Gameplan
-![Dijkstra-Architecture](https://github.com/Dijkstra-Edu/Dijkstra/assets/70965472/c3966b86-467d-4388-be58-874aa18468f2)
-
-It's still a work in progress, but please feel free to suggest changes, via GitHub [issues](https://github.com/Dijkstra-Edu/Dijkstra/issues).
-
-&nbsp;
-
-# Usage
-
-Download the current demo release APK file [here](https://drive.google.com/file/d/1cQ8enp24gR10reOGUvDMJe9Jtb7JijUc/view?usp=sharing).
-
-We're still working on CI/CD and App Store integration in the near future. Until then, please do bear with our App Store Deployments, sorry!
-
-Check out our [official documentation]() for more information about our [recommended hosting stack]() & properly [Updating Dijkstra](), plus work with [our API]().
-
-&nbsp;
-
-# Development
-
-### Server - Node
-
-> _You might need to use a module bundler such as webpack, rollup, parcel, etc._
-
-#### React Native App
-
-```bash
-npm i color-calendar
-```
-
-### Admin Dashboard
-
-> _You might need to use a module bundler such as webpack, rollup, parcel, etc._
-
-
-Check out our [official documentation]() for more information about our [recommended hosting stack]() & properly [Updating Dijkstra](), plus work with [our API]().
-
-&nbsp;
-
 # Community
 
 You can better engage with Dijkstra's community via the following avenues:
 - Discord: [https://discord.com/invite/Vs87cBBU](https://discord.com/invite/Vs87cBBU)
 - Tell us about yourself: Feel free to fill up this [form](https://forms.gle/rAeb5ki3x7LSWU3FA).
-- Join Dijkstra: Click this [link]() to join Dijkstra's GitHub Organization.
+- Join Dijkstra: Click this [link](https://forms.gle/rAeb5ki3x7LSWU3FA) to join Dijkstra's GitHub Organization.
 
 &nbsp;
 
