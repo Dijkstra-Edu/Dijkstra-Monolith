@@ -193,6 +193,7 @@ There's a LOT to be done. Feel free to pick up a task from this TaskList, or try
 - [ ] User Login + Auth for App accounts
 - [ ] Comments → Disqus
 - [ ] Share Post as Web Page Snippet - add mailing list as well ig?
+- [ ] Certification Bot + Role handlers (To track progress of individual members + AI generated Letters of Recommendation
 
 &nbsp;
 
