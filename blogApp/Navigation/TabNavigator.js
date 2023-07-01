@@ -23,9 +23,9 @@ export default function TabNavigator() {
         <tab.Screen  name='Home Page' component={AppNavigator} options={{tabBarIcon: ({focused, color, size}) => {
           return <AntDesign name="home" size={size} color={color} />;
         }, }}/>
-        <tab.Screen  name='Discussions' component={Discussion} options={{tabBarIcon: ({focused, color, size}) => {
+        {/* <tab.Screen  name='Discussions' component={Discussion} options={{tabBarIcon: ({focused, color, size}) => {
           return <AntDesign name="book" size={size} color={color} />;
-        },}}/>
+        },}}/> */}
         <tab.Screen name='Search' component={Search} options={{tabBarIcon: ({focused, color, size}) => {
           return <AntDesign name="search1" size={size} color={color} />;
         }}}/>
