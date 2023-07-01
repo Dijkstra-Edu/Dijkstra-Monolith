@@ -6,6 +6,7 @@ import Search from '../components/Screens/Search';
 import About from '../components/Screens/About';
 import AppNavigator from './AppNavigator';
 import Home from '../components/Screens/Home';
+import Discussion from '../components/Screens/Discussions';
 
 
 const tab = createBottomTabNavigator();
@@ -18,12 +19,11 @@ export default function TabNavigator() {
       tabBarInactiveTintColor: "#fff", 
       tabBarActiveBackgroundColor: "#000",
       tabBarInactiveBackgroundColor: "#000",
-      tab
       }} >
         <tab.Screen  name='Home Page' component={AppNavigator} options={{tabBarIcon: ({focused, color, size}) => {
           return <AntDesign name="home" size={size} color={color} />;
         }, }}/>
-        <tab.Screen  name='Discussions' component={About} options={{tabBarIcon: ({focused, color, size}) => {
+        <tab.Screen  name='Discussions' component={Discussion} options={{tabBarIcon: ({focused, color, size}) => {
           return <AntDesign name="book" size={size} color={color} />;
         },}}/>
         <tab.Screen name='Search' component={Search} options={{tabBarIcon: ({focused, color, size}) => {

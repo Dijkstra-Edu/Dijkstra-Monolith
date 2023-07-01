@@ -1,4 +1,4 @@
-import { StatusBar, StyleSheet, Text, View } from 'react-native'
+import { StyleSheet } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native'
 import TabNavigator from './Navigation/TabNavigator'
@@ -9,6 +9,7 @@ const CUSTOM_THEME = { ...DefaultTheme, colors: { ...DefaultTheme.colors, backgr
 
 export default function App() {
   const [noInternet, setNoInternet] = useState(false);
+  const [reqDark, setReqDark] = useState(false);
   const netInfo = useNetInfo();
 
   const fetchNetInfo = () => {
@@ -25,7 +26,7 @@ export default function App() {
 
   return (
     <NavigationContainer theme={CUSTOM_THEME}>
-      <StatusBar backgroundColor="rgba(255,255,255,1)" barStyle="dark-content" />
+      
       <TabNavigator />
     </NavigationContainer>
   )

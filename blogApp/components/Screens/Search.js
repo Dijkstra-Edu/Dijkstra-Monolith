@@ -4,6 +4,7 @@ import Constants from 'expo-constants'
 import { getSinglePost, searchPost } from '../../API/post';
 import PostListItems from '../PostListItems';
 import { useNavigation } from '@react-navigation/native';
+import FocusAwareStatusBar from '../FocusAwareStatusBar'
 
 export default function Search() {
     const [query, setQuery] = useState('');
@@ -31,6 +32,7 @@ export default function Search() {
 
     return (
         <View style={styles.container}>
+            <FocusAwareStatusBar backgroundColor="rgba(255,255,255,1)" barStyle="dark-content"/>
             <TextInput
                 value={query}
                 onChangeText={(text) => setQuery(text)}

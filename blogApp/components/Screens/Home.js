@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { FlatList, View, Text } from 'react-native';
-import Constants from 'expo-constants';
 
+import FocusAwareStatusBar from '../FocusAwareStatusBar'
 import PostListItems from '../PostListItems';
 import Seperator from '../Seperator';
 import Slider from '../Slider';
@@ -87,31 +87,33 @@ export default function Home({ navigation }) {
 
   // return (<Slider onSlidePress={fetchSinglePost} data={featuerdPosts} title="Featured Posts" />);
 
-  return <FlatList
-    data={latestPosts}
-    keyExtractor={(item) => item.id}
-    contentContainerStyle={{ paddingHorizontal: 10, paddingBottom: 20 }}
-    ListHeaderComponent={Carousel}
-    ItemSeparatorComponent={itemSeparatorComponent}
-    renderItem={renderItem}
-    onEndReached={fetchMorePosts}
-    onEndReachedThreshold={0}
-    ListFooterComponent={() => {
-      return reachedToEnd ? (
-        <View>
-          <Text style={{
-            fontWeight: "bold",
-            color: "#383838",
-            textAlign: "center",
-            paddingVertical: 15,
-          }}>
-            You Reached the End!
-          </Text>
-          {/* <Icon name="rocket" size={30} color="#900" /> */}
-        </View>
-      ) : null;
-    }}
-  />
-  
+  return <View>
+    <FocusAwareStatusBar backgroundColor="rgba(255,255,255,1)" barStyle="dark-content"/>
+    <FlatList
+      data={latestPosts}
+      keyExtractor={(item) => item.id}
+      contentContainerStyle={{ paddingHorizontal: 10, paddingBottom: 20 }}
+      ListHeaderComponent={Carousel}
+      ItemSeparatorComponent={itemSeparatorComponent}
+      renderItem={renderItem}
+      onEndReached={fetchMorePosts}
+      onEndReachedThreshold={0}
+      ListFooterComponent={() => {
+        return reachedToEnd ? (
+          <View>
+            <Text style={{
+              fontWeight: "bold",
+              color: "#383838",
+              textAlign: "center",
+              paddingVertical: 15,
+            }}>
+              You Reached the End!
+            </Text>
+            {/* <Icon name="rocket" size={30} color="#900" /> */}
+          </View>
+        ) : null;
+      }}
+    />
+  </View>
 }
 
