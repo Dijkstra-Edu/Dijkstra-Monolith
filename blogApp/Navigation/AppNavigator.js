@@ -27,7 +27,7 @@ export default function AppNavigator() {
                             justifyContent: 'center',
                             alignItems: 'center',
                             borderRadius: 20,
-                            backgroundColor: "rgba(0,0,0,0.5)",
+                            backgroundColor: "rgba(0,0,0,0.2)",
                         }}>
                             <Ionicons name='arrow-back' size={24} color="white" />
                         </View>
