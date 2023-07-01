@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StatusBar, StyleSheet, Text, View } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native'
 import TabNavigator from './Navigation/TabNavigator'
@@ -25,6 +25,7 @@ export default function App() {
 
   return (
     <NavigationContainer theme={CUSTOM_THEME}>
+      <StatusBar backgroundColor="rgba(255,255,255,1)" barStyle="dark-content" />
       <TabNavigator />
     </NavigationContainer>
   )

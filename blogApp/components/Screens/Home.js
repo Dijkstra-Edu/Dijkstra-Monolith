@@ -59,7 +59,7 @@ export default function Home({ navigation }) {
   }, []);
 
   const Carousel = useCallback(() => {
-    return (<View style={{ paddingTop: Constants.statusBarHeight }}>
+    return (<View>
       {featuerdPosts.length ? <Slider onSlidePress={fetchSinglePost} data={featuerdPosts} title="Featured Posts" /> : null}
       <View style={{ marginTop: 15 }}>
         <Seperator width='100%' />
