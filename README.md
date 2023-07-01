@@ -41,7 +41,7 @@ If you can help, please do reach out to us! :) Feel free to send a message throu
 
 # Usage
 
-Download the current demo release APK file [here](https://drive.google.com/file/d/1cQ8enp24gR10reOGUvDMJe9Jtb7JijUc/view?usp=sharing).
+Download the current demo release APK file [here](https://drive.google.com/file/d/1inkj4b4yEZ6mO867ROi7SCrRYhI8Om8O/view?usp=sharing).
 
 We're still working on CI/CD and App Store integration in the near future. Until then, please do bear with our App Store Deployments, sorry!
 
