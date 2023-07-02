@@ -1,8 +1,8 @@
 {
   "expo": {
     "name": "Dijkstra",
-    "slug": "blogApp",
-    "version": "2.1.0",
+    "slug": "dijkstra",
+    "version": "2.1.1",
     "orientation": "portrait",
     "icon": "./assets/favicon.png",
     "userInterfaceStyle": "light",
