@@ -50,7 +50,7 @@ export default function About({ navigation }) {
                 - Educators
             </Text>
             <Text style={styles.text_paragraph}>
-                If you can help, please do reach out to us! :) Feel free to send a message through the info button above. You can cehck out our website via clicking on Dijkstra's logo above. Also, feel free to check out our GitHub and LinkedIn, and join our Discord Server.
+                If you can help, please do reach out to us! :) Feel free to send a message through the info button above. You can check out our website via clicking on Dijkstra's logo above. Also, feel free to check out our GitHub and LinkedIn, and join our Discord Server.
             </Text>
         </ScrollView>
     )
