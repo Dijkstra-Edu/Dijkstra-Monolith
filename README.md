@@ -229,6 +229,14 @@ You can better engage with Dijkstra's community via the following avenues:
 
 &nbsp;
 
+# Acknowledgements
+
+Shoutouts to all these people and companies that make Dijkstra possible:
+- [Full Stack Niraj](https://www.youtube.com/@fsniraj) - For providing the template upon which Dijkstra was built upon. 
+- [Hotspot Ai](https://hotpot.ai/) - Splash Screens
+
+&nbsp;
+
 <!-- # Getting help
 
 (WIP)
