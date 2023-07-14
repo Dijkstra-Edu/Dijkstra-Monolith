@@ -157,23 +157,24 @@ There's a LOT to be done. Feel free to pick up a task from this TaskList, or try
 - Documentation
   - [ ] GitBook Docs
 - Outreach
-  - [ ] LinkedIn Page (Organization)
+  - [x] LinkedIn Page (Organization)
   - [ ] Posters + Marketing (Organization)
-  - [ ] Discord Server (Organization)
+  - [x] Discord Server (Organization)
 
 ### v2.0.0
 - Open Source Kickstart
   - [ ] Make flyers for OS contribution
   - [ ] Try getting traffic up and running (GDSC, IEEE, VIT) for both use + OS support
 - App
+  - [x] - Splash Screen Loader (Wait for Home page to render completely)
   - [ ] - Splash Screen Loader (Wait for Home page to render completely)
   - [ ] - Make Markup Area Larger
   - [ ] - Fix Search - Backend functionality
   - [ ] - Fix links access from App
   - [ ] - Loader for Fetching more posts (Home)
-  - [ ] - Fix Status Bar
-  - [ ] - Info Card (+Link to portfolio as well as Feedback form)
-  - [ ] - Redesign main home and search → Set theme and Color + Bottom Navigator Color
+  - [x] - Fix Status Bar
+  - [x] - Info Card (+Link to portfolio as well as Feedback form)
+  - [x] - Redesign main home and search → Set theme and Color + Bottom Navigator Color
   - [ ] - Blog Post Design + Colour Handling (how to deal with color depending on Thumbnail Color)
   - [ ] - Fix Search (change for each letter)
   - [ ] - Fix Markup Handling
