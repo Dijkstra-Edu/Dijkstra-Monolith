@@ -215,9 +215,12 @@ It's still a work in progress, but please feel free to suggest changes, via GitH
 <div align="center"><i>Dijkstra Admin Panel - Create Post</i></div>
 <br>
 
-| Dijkstra Home Page                      | Dijkstra Post                           | Dijkstra Post - Another Example
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------- |--------------------------------------------------------------------------------------------------------------- |
-| ![Dijkstra 1](https://github.com/Dijkstra-Edu/Dijkstra/assets/70965472/8bba6934-f994-4d19-bc9c-e35d53cf0ac5) | ![Dijkstra 2](https://github.com/Dijkstra-Edu/Dijkstra/assets/70965472/8f985c75-aae7-4321-9fd3-c6f664ee6fa4) | ![Dijkstra 3](https://github.com/Dijkstra-Edu/Dijkstra/assets/70965472/a64f567d-d54f-4c0e-92a4-fd19ac2ad60c) |
+<p style="padding: 5;" align="center">
+  <a href="https://learn.microsoft.com/en-us/users/jonathanrufussamuel-6286/transcript/v0gw3tnw453em96"><picture><img style="padding: 5;" alt="AZ-900" src="https://github.com/Dijkstra-Edu/Dijkstra/assets/70965472/601ae104-16be-4736-9fec-7d5e8a940927" width="30%"></picture></a>
+  <a href="https://learn.microsoft.com/en-us/users/jonathanrufussamuel-6286/transcript/v0gw3tnw453em96"><picture><img style="padding: 5;" alt="AZ-104" src="https://github.com/Dijkstra-Edu/Dijkstra/assets/70965472/23828484-3e4f-4ba1-bd6e-782a9e900766" width="30%"></picture></a>
+  <a href="https://learn.microsoft.com/en-us/users/jonathanrufussamuel-6286/transcript/v0gw3tnw453em96"><picture><img style="padding: 5;" alt="AZ-900" src="https://github.com/Dijkstra-Edu/Dijkstra/assets/70965472/09e680b0-fb03-4f75-9a60-a4b5f0888264" width="30%"></picture></a>
+</p>
+<div align="center"><i>Splash Screen, Home Screen, About Us Screen</i></div>
 
 &nbsp;
 
