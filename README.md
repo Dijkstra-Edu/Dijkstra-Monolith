@@ -236,7 +236,9 @@ You can better engage with Dijkstra's community via the following avenues:
 # Acknowledgements
 
 Shoutouts to all these people and companies that make Dijkstra possible:
-- [Full Stack Niraj](https://www.youtube.com/@fsniraj) - For providing the template upon which Dijkstra was built upon. 
+- [MLSA](https://studentambassadors.microsoft.com/en-US/studentambassadors/profile/659128e7-9e57-4de9-a787-652411a526e0) - For providing Credits for Dijkstra's Transition to Azure.
+- [Full Stack Niraj](https://www.youtube.com/@fsniraj) - Youtube Channel for support on building this application.
+- [Canva](https://www.canva.com/) - For Design needs
 - [Hotspot Ai](https://hotpot.ai/) - Splash Screens
 
 &nbsp;
