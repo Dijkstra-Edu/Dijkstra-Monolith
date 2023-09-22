@@ -216,9 +216,9 @@ It's still a work in progress, but please feel free to suggest changes, via GitH
 <br>
 
 <p style="padding: 5;" align="center">
-  <a href="https://learn.microsoft.com/en-us/users/jonathanrufussamuel-6286/transcript/v0gw3tnw453em96"><picture><img style="padding: 5;" alt="AZ-900" src="https://github.com/Dijkstra-Edu/Dijkstra/assets/70965472/601ae104-16be-4736-9fec-7d5e8a940927" width="30%"></picture></a>
-  <a href="https://learn.microsoft.com/en-us/users/jonathanrufussamuel-6286/transcript/v0gw3tnw453em96"><picture><img style="padding: 5;" alt="AZ-104" src="https://github.com/Dijkstra-Edu/Dijkstra/assets/70965472/23828484-3e4f-4ba1-bd6e-782a9e900766" width="30%"></picture></a>
-  <a href="https://learn.microsoft.com/en-us/users/jonathanrufussamuel-6286/transcript/v0gw3tnw453em96"><picture><img style="padding: 5;" alt="AZ-900" src="https://github.com/Dijkstra-Edu/Dijkstra/assets/70965472/09e680b0-fb03-4f75-9a60-a4b5f0888264" width="30%"></picture></a>
+  <picture><img style="padding: 5;" alt="Splash Screen" src="https://github.com/Dijkstra-Edu/Dijkstra-Monolith/assets/70965472/f4b7c548-a6c5-4a6c-ab27-c3a47d4c20f9" width="30%"></picture>
+  <picture><img style="padding: 5;" alt="Home" src="https://github.com/Dijkstra-Edu/Dijkstra-Monolith/assets/70965472/759fe05f-9735-4e30-9b3d-afab63cf6f26" width="30%"></picture>
+  <picture><img style="padding: 5;" alt="About Us" src="https://github.com/Dijkstra-Edu/Dijkstra-Monolith/assets/70965472/9045fad1-f078-4caa-99da-73ba88a0e437" width="30%"></picture>
 </p>
 <div align="center"><i>Splash Screen, Home Screen, About Us Screen</i></div>
 
